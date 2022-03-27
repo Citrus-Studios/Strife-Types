@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
 
+use crate::application_related::applications::Application;
+
 use super::{user::User, guild_related::guild::Guild}; 
 
 #[derive(Debug, Serialize, Deserialize)]
