@@ -11,7 +11,7 @@ pub struct Op2 {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Op2Data {
     pub token: String,
-    pub properities: Properties,
+    pub properties: Properties,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub compress: Option<bool>,
     #[serde(skip_serializing_if = "Option::is_none")]
