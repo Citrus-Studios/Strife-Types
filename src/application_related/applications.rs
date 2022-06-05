@@ -9,7 +9,7 @@ pub struct Application {
     id: String,
     name: Option<String>,
     icon: Option<String>,
-    description: String,
+    description: Option<String>,
     rpc_origins: Option<Vec<String>>,
     bot_public: Option<bool>,
     bot_require_code_grant: Option<bool>,
