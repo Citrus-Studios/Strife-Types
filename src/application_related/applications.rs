@@ -1,27 +1,27 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{Snowflake, user::User};
+use crate::{user::User, Snowflake};
 
-use super::teams::Team; 
+use super::teams::Team;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Application {
-    id: Snowflake,
-    name: String,
+    id: String,
+    name: Option<String>,
     icon: Option<String>,
     description: String,
     rpc_origins: Option<Vec<String>>,
-    bot_public: bool,
-    bot_require_code_grant: bool,
+    bot_public: Option<bool>,
+    bot_require_code_grant: Option<bool>,
     terms_of_service_url: Option<String>,
     privacy_policy_url: Option<String>,
     owner: Option<User>,
-    summary: String,
-    verify_key: String,
+    summary: Option<String>,
+    verify_key: Option<String>,
     team: Option<Team>,
-    guild_id: Snowflake,
-    primary_sku_id: Snowflake,
+    guild_id: Option<Snowflake>,
+    primary_sku_id: Option<Snowflake>,
     slug: Option<String>,
     cover_image: Option<String>,
-    flags: Option<i32>
+    flags: Option<i32>,
 }
