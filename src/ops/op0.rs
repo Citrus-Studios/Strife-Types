@@ -4,7 +4,7 @@ use crate::ready::Ready;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Op0 {
-    t: String,
-    s: i32,
-    d: Ready
+    pub t: String,
+    pub s: i32,
+    pub d: Ready
 }
