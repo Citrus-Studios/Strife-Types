@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::application_related::applications::Application;
 
-use super::{user::User, guild_related::guild::Guild}; 
+use super::{guild_related::guild::Guild, user::User};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Ready {
@@ -11,5 +11,5 @@ pub struct Ready {
     guilds: Vec<Guild>,
     session_id: String,
     shard: Option<Vec<i32>>,
-    application: Vec<Application>,
+    application: Application,
 }
