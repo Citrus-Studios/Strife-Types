@@ -1,19 +1,30 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{Snowflake, {presences::PresenceUpdate, welcomescreen_related::welcomescreens::WelcomeScreen, stage_instances::StageInstance}};
+use crate::{
+    Snowflake,
+    {
+        presences::PresenceUpdate, stage_instances::StageInstance,
+        welcomescreen_related::welcomescreens::WelcomeScreen,
+    },
+};
 
-use super::{roles::Role, emojis::Emoji, features::Feature, voice_states::VoiceState, guild_members::GuildMember, channel_related::channels::Channel, stickers::Sticker, guild_scheduled_event_related::guild_scheduled_events::GuildScheduledEvent}; 
+use super::{
+    channel_related::channels::Channel, emojis::Emoji, features::Feature,
+    guild_members::GuildMember,
+    guild_scheduled_event_related::guild_scheduled_events::GuildScheduledEvent, roles::Role,
+    stickers::Sticker, voice_states::VoiceState,
+};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Guild {
-    id: Snowflake,
+    id: String,
     name: String,
     icon: Option<String>,
     icon_has: Option<String>,
     splash: Option<String>,
     discovery_splash: Option<String>,
     owner: Option<bool>,
-    owner_id: i32,
+    owner_id: Snowflake,
     permissions: String,
     region: Option<String>,
     afk_channel_id: Option<Snowflake>,

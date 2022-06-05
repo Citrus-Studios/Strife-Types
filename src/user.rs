@@ -1,10 +1,8 @@
 use serde::{Deserialize, Serialize};
 
-use crate::Snowflake;
-
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct User {
-    id: Snowflake,
+    id: String,
     username: String,
     discriminator: String,
     avatar: Option<String>,
