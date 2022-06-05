@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::Snowflake; 
+use crate::Snowflake;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct User {
@@ -14,9 +14,9 @@ pub struct User {
     banner: Option<String>,
     accent_color: Option<i32>,
     locale: Option<String>,
-    verified: Option<i32>,
+    verified: Option<bool>,
     email: Option<String>,
     flags: Option<i32>,
     premium_type: Option<i32>,
-    public_flags: Option<i32>
+    public_flags: Option<i32>,
 }
