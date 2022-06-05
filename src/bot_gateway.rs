@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use super::session_start_limit::SessionStartLimit; 
+use super::session_start_limit::SessionStartLimit;
 
 // Bot Gateway JSON
 #[derive(Debug, Clone, Serialize, Deserialize)]
